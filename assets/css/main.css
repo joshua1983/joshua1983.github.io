@@ -21,8 +21,10 @@
     align-content: center;
     text-align: center;
     padding: 2%;
+    padding-top: 9%;
 }
 .foto{
+    
     position: relative;
     display: inline-block;
     width: 150px;
@@ -61,6 +63,12 @@
 #direcciones .btn-light{
     background-color: #a9c7d0;
     border-color: black;
+}
+
+.botones{
+    align-content: center;
+    text-align: center;
+    padding: 2%;
 }
 
 @keyframes glow {
