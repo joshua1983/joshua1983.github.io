@@ -88,6 +88,11 @@
     font-family: 'Exo', sans-serif;
 }
 
+.progress-bar{
+    transition: 3s linear;
+    transition-property: width, background-color;
+}
+
 @media screen and (max-width: 376px){
     #imagen{
         height: 485px;
