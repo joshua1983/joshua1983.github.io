@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    AOS.init();
+    
     let efectoItemMenu = 'bounceIn';
     $("div.menu li").on('mouseover',function(){     
         $(this).find("div").addClass(efectoItemMenu);
@@ -7,6 +9,7 @@ $(document).ready(function(){
         $(this).find("div").removeClass(efectoItemMenu);
     });
 });
+
 
 $("a.scroll-suave")
 .click(function(event){
@@ -39,3 +42,18 @@ $("a.scroll-suave")
         }
     }
 });
+$(window).scroll(function() {    
+    posicionarMenu();
+});
+
+function posicionarMenu() {
+    var altura_del_menu = $('.menu').outerHeight(true);
+
+    if ($(window).scrollTop() >= 480){
+        $('.menu').addClass('fixed');
+        $('.wrapper').css('margin-top', (altura_del_menu) + 'px');
+    } else {
+        $('.menu').removeClass('fixed');
+        $('.wrapper').css('margin-top', '0');
+    }
+}
