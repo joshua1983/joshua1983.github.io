@@ -8,6 +8,10 @@ $(document).ready(function(){
     $("div.menu li").on('mouseout',function(){             
         $(this).find("div").removeClass(efectoItemMenu);
     });
+
+    let hoy = new Date();
+    var edad =  hoy.getFullYear() - 1983;
+    $("#s_edad").html(edad);
 });
 
 
